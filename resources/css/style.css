@@ -1,0 +1,574 @@
+/*--------------------------------------*/
+/* BASIC SETUP */
+/*--------------------------------------*/
+
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+
+/*--------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*--------------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/*--------- HEADINGS ----------*/
+
+
+h1, 
+h2,
+h3 { 
+    font-weight: 300;  
+}
+
+h1 {
+    margin-top: 0; 
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px; 
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    color: #cf6d17;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/*--------- BUTTONS ----------*/
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #5DADE2;
+    border: 1px solid #5DADE2;
+    color: #fff;
+    margin-right: 30px;
+    margin-left: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #5DADE2;
+    color: #fff;
+}
+
+
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #5DADE2;
+    background-color: #2486c7;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #5DADE2;
+    background-color: #5DADE2;
+    color: #fff;
+}
+
+/*--------- PARAGRAPHS ----------*/
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    text-align: center;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 140%;
+}
+
+/*------------ICONS--------------*/
+
+ion-icon {
+    color: #5DADE2;
+    display: block;
+    margin-left:30px;
+    margin-bottom: 10px;
+    font-size: 300%;   
+}
+
+/*--------------LINKS---------------*/
+
+.link,
+.tech {
+    text-decoration: none;
+    color: #5DADE2;
+}
+
+/*--------------LISTS---------------*/
+
+
+
+/*--------------------------------------*/
+/* HEADER AND NAV*/ 
+/*--------------------------------------*/
+
+header {
+    background-image: /* linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.69)),*/ url(../img/hero2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ----MAIN NAV---- */
+.main-nav {
+    float: right;
+    list-style: none;
+    padding-top: 44px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin: 2px 0 15px 40px;
+}
+
+.main-nav li a:link, 
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 2px solid #5DADE2 transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #5DADE2;
+}
+/* ----STICKY NAV---- */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.93);
+    box-shadow: 0 2px 2px #dddddd;
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link, 
+.sticky .main-nav li a:visited {
+    padding: 15px 0;
+    color: #555;
+}
+
+.sticky .main-nav {padding-top: 15px;}
+
+/*--------------------------------------*/
+/* STICKY BUTTON */ 
+/*--------------------------------------*/
+.fix-me{
+    position:fixed;
+    margin-right:0;
+    margin-top: 440px;
+    color:#38a1db;
+    border:4px solid #5DADE2;
+    background-color: #fff;
+    font-size:24px;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    text-decoration: none;
+}
+/*--------------------------------------*/
+/* MUSIC COLLAGE */ 
+/*--------------------------------------*/
+
+.section-albums {
+    padding: 0;
+}
+
+.album-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.album-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.album-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.album-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.album-photo img:hover {
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/*--------------------------------------*/
+/* MUSIC VIDS */ 
+/*--------------------------------------*/
+
+.section-music {
+background-color: #f4f4f4;
+}
+
+.section-music h2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.span-2-of-4 .box {
+    display: inline-block;
+    width: 100%;
+}
+
+#videoBox1 {
+    margin-bottom:-20px;
+}
+
+#videoBox2 {
+    padding-left: 12px;
+    
+}
+
+/*--------------------------------------*/
+/* RUNNING */
+/*--------------------------------------*/
+.running-features {
+    margin-top: 40px;
+}
+
+.app-screen {
+    width: 100%;
+    display: inline-block;
+
+}
+
+.running-list {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 35px;
+    list-style-type: none;
+}
+
+.running-list li {
+    margin-bottom: 15px;
+}
+
+.tech:link,
+.tech:visited {
+    color: #555;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+}
+
+.tech:hover,
+.tech:active {
+    color:#555;
+    
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.5s, color 0.5s;
+    
+}
+
+
+/*--------------------------------------*/
+/* TESTIMONIALS */
+/*--------------------------------------*/
+
+
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+cite {
+    display: block;
+    font-size: 90%;
+    margin-top: 25px;
+}
+
+/*blockquote:before {
+    content: "/201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+*/
+cite img {
+    height: 60px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/*--------------------------------------*/
+/* MEMES */
+/*--------------------------------------*/
+.meme-features {
+    margin-top: 120px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url(../img/ff.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+    background-color: rgb(51, 51, 51);
+    }
+   
+.meme-features h2 {
+        padding-top: 80px;
+    }
+
+.meme-images {
+    text-align: center;
+    background-color: rgb(10, 20, 29);
+}
+
+.meme-images img {
+    padding: 10px;
+}
+
+.btn-meme {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.meme-group {
+    padding-bottom: 25px;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.meme-group img {
+    padding: 10px;
+}
+
+/*--------------------------------------*/
+/* CONTACT */
+/*--------------------------------------*/
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+textarea,
+select {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+/*--------------------------------------*/
+/* FOOTER */
+/*--------------------------------------*/
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+    padding-left: 200px;
+    color: #888;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 70%;    
+} 
+
+.facebook,
+.twitter,
+.youtube,
+.instagram {
+    color: #888;
+    margin-left: 30px;
+}
+
+.facebook,
+.twitter,
+.youtube,
+.instagram {
+    transition: color;
+}
+    
+.twitter:hover {
+    color: #1da1f2;
+}
+
+.instagram:hover {
+    color: #c32aa3;
+}
+
+.facebook:hover {
+    color: #1877f2;
+}
+
+.youtube:hover {
+    color: #ff0000;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    font-size: 70%;
+    margin-top: 20px;
+}
+
+
+
+/*--------------------------------------*/
+/* ANIMATIONS */
+/*--------------------------------------
+
+
+.js--wp-1 {
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated {
+    opacity: 1;
+}
+*/
